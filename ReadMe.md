@@ -1,5 +1,7 @@
 # IdearXR插件
- IdearXR  不能直接调用外部第三方库的接口函数，需要经过一层中转的方式接入。
+这是[IdearXR插件](https://dev.ideavr.top/docs/tutorial/custom_plugins/)的CMake版本 。
+
+IdearXR  不能直接调用外部第三方库的接口函数，需要经过一层中转的方式接入。
 
  调用方式为：
 
@@ -17,7 +19,7 @@ cmake ..
 
 创建过程中需要注意的问题包括：
 1. 从脚本中读取并创建对象
-2. 自动生成的插件中：位于native中的.idns文件中应手工添加类型，否则会到指脚本中创建失败。
+2. 自动生成的插件中：位于native中的.idns文件中应手工添加类名，否则会导致脚本中创建失败。
    ```
    [ivr_resource type="IVRNativeScript" load_steps=2 format=2]
    
